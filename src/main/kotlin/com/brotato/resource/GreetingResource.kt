@@ -1,4 +1,4 @@
-package com.brotato
+package com.brotato.resource
 
 import javax.ws.rs.GET
 import javax.ws.rs.Path
