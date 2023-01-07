@@ -1,16 +1,18 @@
 package com.brotato.resource
 
 import com.brotato.dto.PokemonDTO
-import com.brotato.service.PokemonApiService
+import com.brotato.proxy.PokemonApiProxy
 import org.eclipse.microprofile.rest.client.inject.RestClient
-import javax.ws.rs.GET
-import javax.ws.rs.Path
+import javax.ws.rs.*
+import javax.ws.rs.core.MediaType
+import javax.ws.rs.core.Response
 
 @Path("/pokemon")
-class PokemonResource(@RestClient val pokemonApiService: PokemonApiService) {
+class PokemonResource(@RestClient val pokemonApiProxy: PokemonApiProxy) {
     @GET
-    @Path("/{id}")
-    fun getById(id: Int): Set<PokemonDTO> {
-        return pokemonApiService.getById(id)
+    @Produces(MediaType.APPLICATION_JSON)
+    fun getById(@QueryParam("id") id: Int): Response {
+        val pokemon: PokemonDTO = pokemonApiProxy.getById(id)
+        return Response.ok(pokemon).build()
     }
 }

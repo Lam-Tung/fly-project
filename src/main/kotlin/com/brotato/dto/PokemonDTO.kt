@@ -13,8 +13,8 @@ data class PokemonDTO (
 )
 
 data class Sprites (
-    @JsonProperty("front")
+    @JsonProperty("front_default")
     val front: String,
-    @JsonProperty("back")
+    @JsonProperty("back_default")
     val back: String
 )
