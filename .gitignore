@@ -41,5 +41,8 @@ nb-configuration.xml
 
 # Plugin directory
 /.quarkus/cli/plugins/
+
+# Custom
 /mvnw
 /mvnw.cmd
+/.mvn/
