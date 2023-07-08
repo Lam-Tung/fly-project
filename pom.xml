@@ -55,14 +55,14 @@
       <artifactId>quarkus-smallrye-openapi</artifactId>
     </dependency>
     <!-- DATABASE -->
-<!--    <dependency>-->
-<!--      <groupId>io.quarkus</groupId>-->
-<!--      <artifactId>quarkus-hibernate-orm-panache-kotlin</artifactId>-->
-<!--    </dependency>-->
-<!--    <dependency>-->
-<!--      <groupId>io.quarkus</groupId>-->
-<!--      <artifactId>quarkus-jdbc-mariadb</artifactId>-->
-<!--    </dependency>-->
+    <dependency>
+      <groupId>io.quarkus</groupId>
+      <artifactId>quarkus-hibernate-orm-panache-kotlin</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>io.quarkus</groupId>
+      <artifactId>quarkus-jdbc-mariadb</artifactId>
+    </dependency>
     <!-- TESTING -->
     <dependency>
       <groupId>io.quarkus</groupId>
